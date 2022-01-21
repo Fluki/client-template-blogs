@@ -1,0 +1,32 @@
+.adminPost {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid black;
+}
+
+.adminPost p {
+  padding: 20px 0;
+}
+
+.adminPost:hover {
+  border: none;
+  outline: 1px solid black;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.buttons div {
+  font-size: 3rem;
+  padding: 5px;
+}
+
+.delete {
+  cursor: pointer;
+}

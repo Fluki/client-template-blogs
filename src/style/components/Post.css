@@ -1,0 +1,8 @@
+.post {
+  display: flex;
+  flex-direction: column;
+}
+
+.post h2 {
+  text-align: center;
+}

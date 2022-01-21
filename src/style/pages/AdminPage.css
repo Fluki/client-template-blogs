@@ -1,0 +1,16 @@
+.createPost {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.createPost div {
+  padding: 0px 10px;
+  font-weight: bold;
+}
+
+.createPost {
+  margin: 30px 0px;
+}
