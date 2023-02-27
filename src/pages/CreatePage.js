@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, } from 'react';
 import ErrorMessage from '../components/ErrorMessage.js';
 import api from '../utils/API.js';
 import '../style/pages/CreatePage.css';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 class CreatePage extends Component {
   constructor(props) {
@@ -61,13 +63,18 @@ class CreatePage extends Component {
     });
   }
 
+
   render() {
     if (this.state.done === true) {
       return <ErrorMessage message={this.state.message} />;
     }
 
+
     return (
       <div>
+
+        <button><Link to="/admin"> Admin </Link></button>
+        
         <h2>Create Post</h2>
         <form className={'postForm'} onSubmit={this.handleSubmit}>
           <label>

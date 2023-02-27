@@ -1,14 +1,14 @@
 .postPreview {
-  border-bottom: 1px solid black;
   padding: 5px;
   margin-bottom: 40px;
 }
 
 .postPreview p {
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .postPreview:hover {
   border: none;
   outline: 1px solid black;
+  background-color: #b0a990;
 }

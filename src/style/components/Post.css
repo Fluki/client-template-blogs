@@ -1,8 +1,28 @@
 .post {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+button {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  border: none;
+  background-color: #b0a990;
+  padding: 12px 24px 12px 24px;
+  font-size: medium;
+  font-weight: bold;
 }
 
 .post h2 {
+  padding: 20px 0px;
   text-align: center;
+}
+
+.post img {
+  padding: 20px 0px;
+  width:100%;
+  max-width: 450px;
+
 }

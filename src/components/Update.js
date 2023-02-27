@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Loading from '../components/Loading.js';
 import ErrorMessage from '../components/ErrorMessage.js';
 import api from '../utils/API.js';
@@ -69,6 +70,9 @@ class Update extends Component {
 
     return (
       <form className={'postForm'} onSubmit={this.handleSubmit}>
+        <button>
+          <Link to="/admin"> Admin </Link>
+        </button>
         <label>
           Title:
           <input

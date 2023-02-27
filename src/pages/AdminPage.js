@@ -53,8 +53,9 @@ class AdminPage extends Component {
     return (
       <div>
         <Link to={'/admin/create'}>
+          <button><Link to="/"> Home </Link></button>
           <div className={'createPost'}>
-            <div>{'Create post'}</div>
+            <div>{ 'Create post' }</div>
             <AiOutlinePlusCircle />
           </div>
         </Link>
@@ -62,12 +63,14 @@ class AdminPage extends Component {
           {this.state.posts.map((post, key) => {
             return (
               <AdminPost
-                onDeleteClick={(id) => this.onDeleteClick(id)}
+                // Dodat on confirm metod
+                onDeleteClick={ (id) => { if (window.confirm('Is it ok to delete this post?')) { this.onDeleteClick(id) } } }
                 post={post}
                 key={key}
               />
             );
-          })}
+          }).reverse() }
+          {/* isto primenjeno kao i u PostPage.js, samo je primenjena reverse metoda */}
         </div>
       </div>
     );
