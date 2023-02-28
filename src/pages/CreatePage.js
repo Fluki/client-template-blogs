@@ -67,7 +67,7 @@ class CreatePage extends Component {
   render() {
 
     if (this.state.message === "Post created.") {
-      return <Navigate to="/admin" />
+      return <Navigate to="/" />
     }
 
     return (
