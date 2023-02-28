@@ -2,7 +2,7 @@ import React, { Component, } from 'react';
 import ErrorMessage from '../components/ErrorMessage.js';
 import api from '../utils/API.js';
 import '../style/pages/CreatePage.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 
 
 class CreatePage extends Component {
@@ -65,10 +65,10 @@ class CreatePage extends Component {
 
 
   render() {
-    if (this.state.done === true) {
-      return <ErrorMessage message={this.state.message} />;
-    }
 
+    if (this.state.message === "Post created.") {
+      return <Navigate to="/admin" />
+    }
 
     return (
       <div>
@@ -82,7 +82,8 @@ class CreatePage extends Component {
             <input
               type="text"
               value={this.state.title}
-              onChange={(event) => this.handleChangeTitle(event)}
+              onChange={ (event) => this.handleChangeTitle(event) }
+              required
             />
           </label>
 
@@ -91,7 +92,8 @@ class CreatePage extends Component {
             <textarea
               type="text"
               value={this.state.description}
-              onChange={(event) => this.handleChangeDescription(event)}
+              onChange={ (event) => this.handleChangeDescription(event) }
+              required
             />
           </label>
 
@@ -105,7 +107,11 @@ class CreatePage extends Component {
           </label>
 
           <input type="submit" value="Submit" />
+
         </form>
+
+        <ErrorMessage message={ this.state.message } />
+        
       </div>
     );
   }

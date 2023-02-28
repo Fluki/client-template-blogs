@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import Loading from '../components/Loading.js';
 import ErrorMessage from '../components/ErrorMessage.js';
 import api from '../utils/API.js';
@@ -60,6 +60,11 @@ class Update extends Component {
   }
 
   render() {
+    
+    if (this.state.message === "Post updated.") {
+      return <Navigate to="/admin" />
+    }
+
     if (this.state.done === true) {
       return <ErrorMessage message={this.state.message} />;
     }
